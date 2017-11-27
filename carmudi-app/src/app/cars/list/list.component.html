@@ -1,0 +1,33 @@
+<div class="list-main-wrapper">
+    <div class="list-body">
+      <div class="search-input">
+          <input [(ngModel)]="query" placeholder="Search" (ngModelChange)="updateCarList(query)">
+      </div>
+      <div class="item-info-display">
+        <p>Displaying {{itemFrom}} - {{itemTo}} of {{carSize}} Results</p>
+      </div>
+  
+      <div class="car-item-container" *ngFor="let car of carList | search:'name':query | paginate: { itemsPerPage: 10, currentPage: p }" (click)="selectedCar(car.id)">
+        <div class="row">
+          <div class="col-lg-4">
+            <img [src]="car.thumbnail" alt="car-image">
+          </div>
+          <div class="col-lg-5">
+            <div class="short-desc">
+              <h3>{{car.name}}</h3>
+              <p><span><i class="fa fa-map-marker" aria-hidden="true"></i> </span>{{car.location}}</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="orange-hl car-price-list">{{car.price}}</h3>
+          </div>
+        </div>
+      </div>
+  
+      <div class="pagintaion-container">
+        <pagination-controls (pageChange)="pageChanged($event,p = $event)"></pagination-controls>
+      </div>
+  
+    </div>
+    <button (click)="backToTop()" id="backTop" title="Go to top"><span><i class="fa fa-angle-up" aria-hidden="true"></i></span></button>
+  </div>

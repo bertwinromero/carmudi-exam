@@ -1,0 +1,26 @@
+<div class="selected-main-wrapper">
+  <div class="container">
+    <div class="selected">
+      <h4 class="car-name">{{car.name}}</h4>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="car-main-image">
+            <img [src]="car.main_picture" alt="car-image">
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="car-selected-desc">
+            <div class="header-desc">
+              <h3 class="orange-hl">{{car.price}}</h3>
+              <p><span><i class="fa fa-map-marker" aria-hidden="true"></i> </span>{{car.location}}</p>
+            </div>
+
+            <div class="selected-body-desc">
+              <p>{{car.description | limitTo : 200}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

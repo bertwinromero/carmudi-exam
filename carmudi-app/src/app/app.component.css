@@ -1,0 +1,42 @@
+.main-wrapper {
+    background-color: #F5F5F5;
+}
+
+.header {
+    background-color: #fff;
+    height: 82px;
+    text-align: center;
+    border-bottom: .0625rem solid #d1d3d4;
+}
+
+.logo{
+    padding: 10px;
+}
+
+.logo img {
+    width: 185px;
+}
+
+.list-main-wrapper {
+    margin-top: 70px;
+}
+
+.footer{
+    background-color: #222;
+    height: 123px;
+    padding-top: 20px;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 174px;
+}
+
+.container-footer {
+    width: 73%;
+    margin: 0 auto;
+}
